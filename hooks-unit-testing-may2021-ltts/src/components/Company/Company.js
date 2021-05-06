@@ -11,11 +11,13 @@ const Company = (props) => {
 
   return(
     <div>
-      <p>Welcome to My Company's Official Webpage!!!</p>
-      <div data-testid='companyEl' className='redText'>{props.companyName}</div>
+      <p>Welcome to My Company's Official Webpage!</p>
+      <div data-testid='companyEl' className='redText'>
+        {props.companyName}
+      </div>
       {/* adding test case to find the following element by placeholder */}
       <input type='text' placeholder="company"/> 
-      <p>This is amazing!</p>
+      <p>This is amazing!!</p>
       <br/>
       <br/>
       <input type='text' 

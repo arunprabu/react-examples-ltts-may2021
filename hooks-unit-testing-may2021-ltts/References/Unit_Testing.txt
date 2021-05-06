@@ -1,4 +1,4 @@
-JEST Turorial
+JEST Tutorial
 ---
 npm i @testing-library/react react-test-render 
 

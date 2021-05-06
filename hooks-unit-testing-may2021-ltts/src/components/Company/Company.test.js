@@ -21,10 +21,10 @@ describe('company component', () => {
     // checking if props are received correctly
     expect(getByTestId('companyEl')).toHaveTextContent('Facebook');// companyEl is the test id of the element
   });
-
+  
   it('should have the right placeholder in input', () => {
-    const { queryByPlaceholderText } = render(<Company />);
-
+    const { queryByPlaceholderText  } = render(<Company />);
+  
     //if the placeholder is not matching, it will fail
     expect(queryByPlaceholderText('company')).toBeTruthy();
   });
@@ -32,8 +32,8 @@ describe('company component', () => {
   //checking whether the comp has right text
   it('should have official webpage text', () => {
     const { getByText } = render(<Company />);
-    const linkElement = getByText('Welcome to My Company\'s Official Webpage!');
-    expect(linkElement).toBeInTheDocument();
+    const titleElement = getByText('Welcome to My Company\'s Official Webpage!');
+    expect(titleElement).toBeInTheDocument();
   });
 
   //now let's check if the input element works well with onChange event
@@ -51,10 +51,10 @@ describe('company component', () => {
 
   //finally let's focus on snapshot testing
   it('should have right company comp snapshot', () => {
-    const tree = renderer.create(<Company name='Facebook'></Company>).toJSON();
+    const tree = renderer.create(<Company companyName='Facebook'></Company>).toJSON();
     console.log(tree);
     expect(tree).toMatchSnapshot();
   });
-  
+
 });
 

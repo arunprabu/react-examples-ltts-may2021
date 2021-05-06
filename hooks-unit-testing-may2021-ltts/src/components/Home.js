@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { PageContext } from '../PageContext';
 import MyProfile from './MyProfile';
 import Todo from './Todo';
 import UserData from './UserData';
 
-const Home = (props) => {
+const Home = () => {
+
+  const userStatus = useContext(PageContext);
+  console.log(userStatus);
 
   return (
-    <div className="container">
+    <div>
       <h1>Welcome to Hooks Demo!</h1>
       <MyProfile/>
       <hr />
@@ -17,7 +21,10 @@ const Home = (props) => {
       <Todo />
       <hr/>
       
-      
+      <h2>useContext() - Hook Demo</h2>
+      <p>Is Authenticated: {userStatus.isLoggedIn? 'Yes': 'No'}</p>
+      <p>Last Login: {userStatus.lastLogin}</p>
+
     </div>
   )
 }

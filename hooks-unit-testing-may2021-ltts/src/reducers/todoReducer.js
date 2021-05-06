@@ -1,3 +1,6 @@
+// reducer is a fn that takes in current state and action
+// returns state mandatorily
+
 function todoReducer(state = [], action){
 
   switch(action.type){
