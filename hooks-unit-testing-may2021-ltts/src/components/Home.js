@@ -15,6 +15,8 @@ const Home = (props) => {
       <hr />
 
       <Todo />
+      <hr/>
+      
       
     </div>
   )

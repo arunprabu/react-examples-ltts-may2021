@@ -12,6 +12,7 @@ function App() {
       <div>
         <Header/>
         <div style={{marginTop: '80px'}}>
+          <h1>React Hooks Project</h1>
           <Switch>
             <Route path='/' component={Home} exact/>
             <Route path='/about' component={About}/>
